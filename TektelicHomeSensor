@@ -1,0 +1,278 @@
+[
+  {
+    "@id": "dtmi:tektelic:HomeSensor;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:tektelic:HomeSensor:battery_voltage;1",
+        "@type": [
+          "Telemetry",
+          "Voltage"
+        ],
+        "displayName": {
+          "en": "Battery Voltage"
+        },
+        "name": "battery_voltage",
+        "schema": "float",
+        "unit": "volt"
+      },
+      {
+        "@id": "dtmi:tektelic:HomeSensor:ambient_temperature;1",
+        "@type": [
+          "Telemetry",
+          "Temperature"
+        ],
+        "displayName": {
+          "en": "Ambient Temperature"
+        },
+        "name": "ambient_temperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@id": "dtmi:tektelic:HomeSensor:relative_humidity;1",
+        "@type": [
+          "Telemetry",
+          "Humidity"
+        ],
+        "displayName": {
+          "en": "Relative Humidity"
+        },
+        "name": "relative_humidity",
+        "schema": "double",
+        "unit": "percent"
+      },
+      {
+        "@id": "dtmi:tektelic:HomeSensor:impact_magnitude;1",
+        "@type": [
+          "Telemetry",
+          "Acceleration"
+        ],
+        "displayName": {
+          "en": "Acceleration Magnitude"
+        },
+        "name": "impact_magnitude",
+        "schema": "double",
+        "unit": "gForce"
+      },
+      {
+        "@id": "dtmi:tektelic:HomeSensor:mcu_temperature;1",
+        "@type": [
+          "Telemetry",
+          "Temperature"
+        ],
+        "displayName": {
+          "en": "MCU Temperature"
+        },
+        "name": "mcu_temperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@id": "dtmi:tektelic:HomeSensor:Moisture;1",
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "displayName": {
+          "en": "Moisture"
+        },
+        "name": "Moisture",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:tektelic:HomeSensor:reed_count;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "Reed Counter"
+        },
+        "name": "reed_count",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:tektelic:HomeSensor:acceleration;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "acceleration"
+        },
+        "name": "acceleration",
+        "schema": {
+          "@id": "dtmi:tektelic:HomeSensor:acceleration:schema;1",
+          "@type": "Object",
+          "displayName": {
+            "en": "Object"
+          },
+          "fields": [
+            {
+              "@id": "dtmi:tektelic:HomeSensor:acceleration:schema:x;1",
+              "displayName": {
+                "en": "Acceleration X Axis"
+              },
+              "name": "x",
+              "schema": "double"
+            },
+            {
+              "@id": "dtmi:tektelic:HomeSensor:acceleration:schema:y;1",
+              "displayName": {
+                "en": "Acceleration Y Axis"
+              },
+              "name": "y",
+              "schema": "double"
+            },
+            {
+              "@id": "dtmi:tektelic:HomeSensor:acceleration:schema:z;1",
+              "displayName": {
+                "en": "Acceleration Z Axis"
+              },
+              "name": "z",
+              "schema": "double"
+            }
+          ]
+        }
+      },
+      {
+        "@id": "dtmi:tektelic:HomeSensor:reed_state;1",
+        "@type": [
+          "Telemetry",
+          "State"
+        ],
+        "displayName": {
+          "en": "Reed Switch State"
+        },
+        "name": "reed_state",
+        "schema": {
+          "@id": "dtmi:tektelic:HomeSensor:reed_state:schema;1",
+          "@type": "Enum",
+          "enumValues": [
+            {
+              "@id": "dtmi:tektelic:HomeSensor:reed_state:schema:MagnetPresent;1",
+              "displayName": {
+                "en": "Magnet Present"
+              },
+              "enumValue": 0,
+              "name": "MagnetPresent"
+            },
+            {
+              "@id": "dtmi:tektelic:HomeSensor:reed_state:schema:MagnetAbsent;1",
+              "displayName": {
+                "en": "Magnet Absent"
+              },
+              "enumValue": 255,
+              "name": "MagnetAbsent"
+            }
+          ],
+          "valueSchema": "integer"
+        }
+      },
+      {
+        "@id": "dtmi:tektelic:HomeSensor:light_detected;1",
+        "@type": [
+          "Telemetry",
+          "State"
+        ],
+        "displayName": {
+          "en": "Ambient Light State"
+        },
+        "name": "light_detected",
+        "schema": {
+          "@id": "dtmi:tektelic:HomeSensor:light_detected:schema;1",
+          "@type": "Enum",
+          "enumValues": [
+            {
+              "@id": "dtmi:tektelic:HomeSensor:light_detected:schema:Dark;1",
+              "displayName": {
+                "en": "Dark"
+              },
+              "enumValue": 0,
+              "name": "Dark"
+            },
+            {
+              "@id": "dtmi:tektelic:HomeSensor:light_detected:schema:Bright;1",
+              "displayName": {
+                "en": "Bright"
+              },
+              "enumValue": 255,
+              "name": "Bright"
+            }
+          ],
+          "valueSchema": "integer"
+        }
+      },
+      {
+        "@id": "dtmi:tektelic:HomeSensor:break_in;1",
+        "@type": [
+          "Telemetry",
+          "State"
+        ],
+        "displayName": {
+          "en": "Break In"
+        },
+        "name": "break_in",
+        "schema": {
+          "@id": "dtmi:tektelic:HomeSensor:break_in:schema;1",
+          "@type": "Enum",
+          "enumValues": [
+            {
+              "@id": "dtmi:tektelic:HomeSensor:break_in:schema:True;1",
+              "displayName": {
+                "en": "True"
+              },
+              "enumValue": 0,
+              "name": "True"
+            },
+            {
+              "@id": "dtmi:tektelic:HomeSensor:break_in:schema:False;1",
+              "displayName": {
+                "en": "False"
+              },
+              "enumValue": 255,
+              "name": "False"
+            }
+          ],
+          "valueSchema": "integer"
+        }
+      },
+      {
+        "@id": "dtmi:tektelic:HomeSensor:motion_event_state;1",
+        "@type": [
+          "Telemetry",
+          "State"
+        ],
+        "displayName": {
+          "en": "Motion (PIR) Event State"
+        },
+        "name": "motion_event_state",
+        "schema": {
+          "@id": "dtmi:tektelic:HomeSensor:motion_event_state:schema;1",
+          "@type": "Enum",
+          "enumValues": [
+            {
+              "@id": "dtmi:tektelic:HomeSensor:motion_event_state:schema:NoMotion;1",
+              "displayName": {
+                "en": "No motion"
+              },
+              "enumValue": 0,
+              "name": "NoMotion"
+            },
+            {
+              "@id": "dtmi:tektelic:HomeSensor:motion_event_state:schema:MotionDetected;1",
+              "displayName": {
+                "en": "Motion detected"
+              },
+              "enumValue": 255,
+              "name": "MotionDetected"
+            }
+          ],
+          "valueSchema": "integer"
+        }
+      }
+    ],
+    "displayName": {
+      "en": "TektelicHomeSensor"
+    },
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  }
+]
